@@ -1,5 +1,10 @@
 https://github.com/DorManDel/DorUtils_CPP
 
+## after each update: 
+### git add .
+### git commit -m "Add project README, roadmap, and visualization hub"
+### git push
+
 # DorUtils_CPP
 
 DorUtils_CPP is a personal C++ utility and learning library.
