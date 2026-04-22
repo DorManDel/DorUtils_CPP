@@ -2,7 +2,7 @@ https://github.com/DorManDel/DorUtils_CPP
 
 ## after each update: 
 ### git add .
-### git commit -m "Add project README, roadmap, and visualization hub"
+### git commit -m " what did you do? ...  "
 ### git push
 
 # DorUtils_CPP
