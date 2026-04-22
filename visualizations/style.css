@@ -1,87 +1,108 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #f8fafc;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
 }
 
 .page {
-  width: min(1100px, calc(100% - 24px));
-  margin: 0 auto;
-  padding: 24px 0 40px;
+    width: min(1100px, calc(100% - 24px));
+    margin: 0 auto;
+    padding: 24px 0 40px;
 }
 
 .hero {
-  margin-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 .hero h1 {
-  margin: 0 0 10px;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
+    margin: 0 0 10px;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
 }
 
 .hero p {
-  margin: 0;
-  color: #cbd5e1;
-  line-height: 1.6;
+    margin: 0;
+    color: #cbd5e1;
+    line-height: 1.6;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
 }
 
 .card {
-  background: #111827;
-  border: 1px solid #374151;
-  border-radius: 16px;
-  padding: 18px;
+    background: #111827;
+    border: 1px solid #374151;
+    border-radius: 16px;
+    padding: 18px;
 }
 
 .card h2 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .card p {
-  color: #cbd5e1;
-  line-height: 1.5;
+    color: #cbd5e1;
+    line-height: 1.5;
 }
 
 .status {
-  display: inline-block;
-  margin: 10px 0 14px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: bold;
+    display: inline-block;
+    margin: 10px 0 14px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 .status.done {
-  background: #14532d;
-  color: #bbf7d0;
+    background: #14532d;
+    color: #bbf7d0;
 }
 
 .status.planned {
-  background: #3f3f46;
-  color: #e4e4e7;
+    background: #3f3f46;
+    color: #e4e4e7;
 }
 
 .actions a {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  background: #2563eb;
-  padding: 10px 14px;
-  border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #2563eb;
+    padding: 10px 14px;
+    border-radius: 10px;
+}
+
+.topbar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.home-btn,
+.hub-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #2563eb;
+    padding: 10px 14px;
+    border-radius: 10px;
+}
+
+.hub-btn {
+    background: #7c3aed;
 }
 
 @media (min-width: 860px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
