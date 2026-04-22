@@ -211,6 +211,27 @@ button:hover {
   outline-offset: 2px;
 }
 
+.topbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.home-btn,
+.hub-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: #2563eb;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.hub-btn {
+  background: #7c3aed;
+}
+
 @media (min-width: 900px) {
   .layout {
     grid-template-columns: 1fr 1.2fr 1fr;
