@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Visualization | DorUtils</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="page">
+        <header class="hero">
+            <h1>Stack Visualization</h1>
+            <p>
+                Interactive simple-mode demo of a stack implemented as a dynamic array.
+            </p>
+        </header>
+
+        <section class="layout">
+            <section class="panel controls">
+                <h2>Controls</h2>
+
+                <div class="control-group">
+                    <input id="valueInput" type="text" placeholder="Enter value" />
+                    <button id="pushBtn" type="button">Push</button>
+                </div>
+
+                <div class="control-group">
+                    <button id="popBtn" type="button">Pop</button>
+                    <button id="clearBtn" type="button">Clear</button>
+                </div>
+
+                <div class="control-group">
+                    <button id="demoO1Btn" type="button">Run Demo O(1)</button>
+                    <button id="demoONBtn" type="button">Run Demo O(n)</button>
+                </div>
+
+                <div class="notes">
+                    <p><strong>Manual Mode:</strong> interact with the stack directly.</p>
+                    <p><strong>Demo O(1):</strong> shows a push when free capacity already exists.</p>
+                    <p><strong>Demo O(n):</strong> shows a push that forces a resize operation.</p>
+                </div>
+            </section>
+
+            <section class="panel visual">
+                <h2>Stack</h2>
+                <div id="stackContainer" class="stack-container"></div>
+            </section>
+
+            <section class="panel side-panel">
+                <h2>State</h2>
+
+                <div class="stats">
+                    <p><strong>Size:</strong> <span id="sizeValue">0</span></p>
+                    <p><strong>Capacity:</strong> <span id="capacityValue">0</span></p>
+                    <p><strong>Top:</strong> <span id="topValue">—</span></p>
+                    <p><strong>Current n:</strong> <span id="nValue">0</span></p>
+                </div>
+
+                <h3>Usage</h3>
+                <p id="usageText">0 / 0</p>
+                <div id="capacityBar" class="capacity-bar"></div>
+
+                <h3>Complexity</h3>
+                <div class="complexity-box">
+                    <p><strong>Current operation:</strong> <span id="currentOperation">—</span></p>
+                    <p><strong>Time:</strong> <span id="timeComplexity">—</span></p>
+                    <p><strong>Space:</strong> <span id="spaceComplexity">O(n)</span></p>
+                </div>
+
+                <div id="complexityExplanation" class="complexity-explanation">
+                    Waiting for an operation...
+                </div>
+            </section>
+        </section>
+
+        <section class="panel log-panel">
+            <h2>Operation Log</h2>
+            <div id="logBox" class="log-box"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
