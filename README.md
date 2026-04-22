@@ -1,4 +1,4 @@
-https://dormandel.github.io/DorUtils_CPP/
+https://dormandel.github.io/DorUtils_CPP/index.html
 
 https://github.com/DorManDel/DorUtils_CPP
 
