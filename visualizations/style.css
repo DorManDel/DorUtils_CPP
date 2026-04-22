@@ -1,55 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DorUtils Visualizations</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <main class="page">
-    <header class="hero">
-      <h1>DorUtils Visualization Hub</h1>
-      <p>
-        Central page for interactive demos, experiments, and educational visualizations.
-      </p>
-    </header>
+* {
+  box-sizing: border-box;
+}
 
-    <section class="grid">
-      <article class="card">
-        <h2>Stack</h2>
-        <p>
-          Interactive stack visualization with push/pop, size/capacity view,
-          and complexity explanation.
-        </p>
-        <div class="status done">Ready</div>
-        <div class="actions">
-          <a href="./stack/index.html">Open Visualization</a>
-        </div>
-      </article>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+}
 
-      <article class="card">
-        <h2>Queue</h2>
-        <p>
-          Planned queue visualization with enqueue/dequeue and front/rear explanation.
-        </p>
-        <div class="status planned">Planned</div>
-        <div class="actions">
-          <a href="#">Coming Soon</a>
-        </div>
-      </article>
+.page {
+  width: min(1100px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
 
-      <article class="card">
-        <h2>BFS</h2>
-        <p>
-          Planned BFS visualizer with queue, visited set, order, and complexity notes.
-        </p>
-        <div class="status planned">Planned</div>
-        <div class="actions">
-          <a href="#">Coming Soon</a>
-        </div>
-      </article>
-    </section>
-  </main>
-</body>
-</html>
+.hero {
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.hero p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.status {
+  display: inline-block;
+  margin: 10px 0 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.status.done {
+  background: #14532d;
+  color: #bbf7d0;
+}
+
+.status.planned {
+  background: #3f3f46;
+  color: #e4e4e7;
+}
+
+.actions a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: #2563eb;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
