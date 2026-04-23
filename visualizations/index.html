@@ -1,138 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- =========================================================
+    <!-- =========================================================
        PAGE META
        This file lives in: DorUtils_CPP/visualizations/index.html
        So:
        - ../images/...   goes up to the repo root images folder
        - ./style.css     uses the CSS file in visualizations/
   ========================================================== -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>DorUtils_CPP | Visualization Hub</title>
-  <meta name="description"
-    content="DorUtils_CPP visualization hub for interactive demos, experiments, and learning tools." />
+    <title>DorUtils_CPP | Visualization Hub</title>
+    <meta name="description"
+        content="DorUtils_CPP visualization hub for interactive demos, experiments, and learning tools." />
 
-  <link rel="icon" type="image/png" href="../images/favicon-main.png" />
-  <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/png" href="../images/favicon-main.png" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <!-- =========================================================
+    <!-- =========================================================
        BACKGROUND LAYERS
   ========================================================== -->
-  <div class="bg-grid"></div>
+    <div class="bg-grid"></div>
 
-  <div class="bg-graph">
-    <span class="node n1"></span>
-    <span class="node n2"></span>
-    <span class="node n3"></span>
-    <span class="node n4"></span>
-    <span class="node n5"></span>
-    <span class="node n6"></span>
-    <span class="node n7"></span>
-    <span class="node n8"></span>
+    <div class="bg-graph">
+        <span class="node n1"></span>
+        <span class="node n2"></span>
+        <span class="node n3"></span>
+        <span class="node n4"></span>
+        <span class="node n5"></span>
+        <span class="node n6"></span>
+        <span class="node n7"></span>
+        <span class="node n8"></span>
 
-    <span class="line l1"></span>
-    <span class="line l2"></span>
-    <span class="line l3"></span>
-    <span class="line l4"></span>
-    <span class="line l5"></span>
-    <span class="line l6"></span>
-  </div>
+        <span class="line l1"></span>
+        <span class="line l2"></span>
+        <span class="line l3"></span>
+        <span class="line l4"></span>
+        <span class="line l5"></span>
+        <span class="line l6"></span>
+    </div>
 
-  <!-- Optional animated code background -->
-  <div class="bg-code" aria-hidden="true">
-    <div class="code-line">template&lt;typename T&gt;</div>
-    <div class="code-line">class Stack { ... };</div>
-    <div class="code-line">BFS(graph, source);</div>
-    <div class="code-line">Queue&lt;int&gt; q;</div>
-    <div class="code-line">O(1) amortized</div>
-    <div class="code-line">O(V + E)</div>
-    <div class="code-line">push(value);</div>
-    <div class="code-line">pop();</div>
-  </div>
+    <!-- Optional animated code background -->
+    <div class="bg-code" aria-hidden="true">
+        <div class="code-line">template&lt;typename T&gt;</div>
+        <div class="code-line">class Stack { ... };</div>
+        <div class="code-line">BFS(graph, source);</div>
+        <div class="code-line">Queue&lt;int&gt; q;</div>
+        <div class="code-line">O(1) amortized</div>
+        <div class="code-line">O(V + E)</div>
+        <div class="code-line">push(value);</div>
+        <div class="code-line">pop();</div>
+    </div>
 
-  <main class="page">
-    <!-- =========================================================
+    <main class="page">
+        <!-- =========================================================
          TOP BAR
     ========================================================== -->
-    <header class="topbar">
-      <a class="ghost-btn" href="https://github.com/DorManDel/DorUtils_CPP" target="_blank" rel="noopener noreferrer">
-        View Source
-      </a>
-    </header>
+        <header class="topbar">
+            <a class="ghost-btn" href="https://github.com/DorManDel/DorUtils_CPP" target="_blank"
+                rel="noopener noreferrer">
+                View Source
+            </a>
+        </header>
 
-    <!-- =========================================================
+        <!-- =========================================================
          HERO
     ========================================================== -->
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">C++ Utility & Learning Library</p>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">C++ Utility & Learning Library</p>
 
-        <div class="title-row">
-          <img src="../images/favicon-main.png" alt="DorUtils icon" class="title-icon" />
-          <h1>DorUtils_CPP</h1>
-        </div>
+                <div class="title-row">
+                    <img src="../images/favicon-main.png" alt="DorUtils icon" class="title-icon" />
+                    <h1> DorUtils | Visual Algorithms Studio </h1>
+                </div>
 
-        <p class="hero-text">
-          A personal C++ project that combines implementations,
-          documentation, tests, debug tools, and interactive visualizations.
-        </p>
+                <p class="hero-text">
+                    A personal C++ project that combines implementations,
+                    documentation, tests, debug tools, and interactive visualizations.
+                </p>
 
-        <p class="hero-note">
-          Current focus: building a clean template for Stack, Queue, BFS, DFS,
-          Debug, and future modules.
-        </p>
-      </div>
-    </section>
+                <p class="hero-note">
+                    Current focus: building a clean template for Stack, Queue, BFS, DFS,
+                    Debug, and future modules.
+                </p>
+            </div>
+        </section>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE CARDS
     ========================================================== -->
-    <section class="cards">
-      <article class="card stack-card">
-        <h2>Stack</h2>
-        <p>Interactive stack demo with size, capacity and complexity explanation.</p>
-        <div class="card-actions">
-          <a href="./stack/index.html">Open</a>
-        </div>
-      </article>
+        <section class="cards">
+            <a href="./stack/index.html" class="card-link">
+                <article class="card stack-card clickable-card">
+                    <h2>Stack</h2>
+                    <p>Interactive stack demo with size, capacity and complexity explanation.</p>
+                    <div class="card-actions">
+                        <span class="open-pill">Open</span>
+                    </div>
+                </article>
+            </a>
 
-      <article class="card queue-card">
-        <h2>Queue</h2>
-        <p>Planned queue demo with enqueue/dequeue and front/rear explanation.</p>
-        <div class="card-actions">
-          <span class="soon-badge">Soon</span>
-        </div>
-      </article>
+            <article class="card queue-card">
+                <h2>Queue</h2>
+                <p>Planned queue demo with enqueue/dequeue and front/rear explanation.</p>
+                <div class="card-actions">
+                    <span class="soon-badge">Soon</span>
+                </div>
+            </article>
 
-      <article class="card bfs-card">
-        <h2>BFS</h2>
-        <p>Planned graph traversal visualizer with queue, visited set and order.</p>
-        <div class="card-actions">
-          <span class="soon-badge">Soon</span>
-        </div>
-      </article>
+            <article class="card bfs-card">
+                <h2>BFS</h2>
+                <p>Planned graph traversal visualizer with queue, visited set and order.</p>
+                <div class="card-actions">
+                    <span class="soon-badge">Soon</span>
+                </div>
+            </article>
 
-      <article class="card dfs-card">
-        <h2>DFS</h2>
-        <p>Planned DFS traversal demo with branching flow and depth-first behavior.</p>
-        <div class="card-actions">
-          <span class="soon-badge">Soon</span>
-        </div>
-      </article>
+            <article class="card dfs-card">
+                <h2>DFS</h2>
+                <p>Planned DFS traversal demo with branching flow and depth-first behavior.</p>
+                <div class="card-actions">
+                    <span class="soon-badge">Soon</span>
+                </div>
+            </article>
 
-      <article class="card debug-card">
-        <h2>Debug</h2>
-        <p>Colored console helpers, cleaner outputs and structured debug messages.</p>
-        <div class="card-actions">
-          <span class="soon-badge">Soon</span>
-        </div>
-      </article>
-    </section>
-  </main>
+            <article class="card debug-card">
+                <h2>Debug</h2>
+                <p>Colored console helpers, cleaner outputs and structured debug messages.</p>
+                <div class="card-actions">
+                    <span class="soon-badge">Soon</span>
+                </div>
+            </article>
+        </section>
+        <footer class="footer">
+            Made by Dor Mandel
+        </footer>
+    </main>
 </body>
+
 </html>
