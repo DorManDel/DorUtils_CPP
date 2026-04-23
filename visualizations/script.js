@@ -1,28 +1,18 @@
-/*======================================================================
-  DorUtils Homepage Script
-  Purpose:
-  - animate favicon gently
-  - keep homepage behavior simple and maintainable
-======================================================================*/
+/* ==========================================================
+   DORUTILS VISUALIZATION HUB SCRIPT
+========================================================== */
 
-const faviconFrames = [
-  "./images/favicon-main-1.png",
-  "./images/favicon-main-1.png",
-  "./images/favicon-main-1.png"
-];
+const fishLayer = document.getElementById("asciiFishLayer");
+const fishToggleBtn = document.getElementById("fishToggleBtn");
 
-let faviconIndex = 0;
-const faviconEl = document.getElementById("site-favicon");
+if (fishLayer && fishToggleBtn) {
+  let fishEnabled = true;
 
-/* -------------------------------------------------------------
-   Summary:
-   Rotate favicon frames every few seconds to simulate animation.
-------------------------------------------------------------- */
-function animateFavicon() {
-  if (!faviconEl) return;
-
-  faviconIndex = (faviconIndex + 1) % faviconFrames.length;
-  faviconEl.href = faviconFrames[faviconIndex] + "?v=" + Date.now();
+  fishToggleBtn.addEventListener("click", () => {
+    fishEnabled = !fishEnabled;
+    fishLayer.classList.toggle("is-hidden", !fishEnabled);
+    fishToggleBtn.classList.toggle("is-off", !fishEnabled);
+    fishToggleBtn.textContent = fishEnabled ? "Fish ON" : "Fish OFF";
+    fishToggleBtn.setAttribute("aria-pressed", String(fishEnabled));
+  });
 }
-
-setInterval(animateFavicon, 1800);
