@@ -1,37 +1,28 @@
-<!-- put on each vis page body: 
- <header class="topbar">
-  <a class="home-btn" href="../../index.html">← Home</a>
-  <a class="hub-btn" href="../index.html">All Visualizations</a>
-</header>
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- =========================================================
+       PAGE META
+       This file lives in: DorUtils_CPP/visualizations/index.html
+       So:
+       - ../images/...   goes up to the repo root images folder
+       - ./style.css     uses the CSS file in visualizations/
+  ========================================================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>DorUtils_CPP | C++ Utility & Learning Library</title>
+  <title>DorUtils_CPP | Visualization Hub</title>
   <meta name="description"
-    content="DorUtils_CPP is a personal C++ utility and learning library featuring data structures, algorithms, debug tools and interactive visualizations." />
+    content="DorUtils_CPP visualization hub for interactive demos, experiments, and learning tools." />
 
-  <meta property="og:url" content="https://dormandel.github.io/DorUtils_CPP/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="DorUtils_CPP" />
-  <meta property="og:title" content="DorUtils_CPP | C++ Utility & Learning Library" />
-  <meta property="og:description"
-    content="A personal C++ project featuring data structures, algorithms, debug tools, tests and interactive visualizations." />
-  <meta property="og:image" content="https://dormandel.github.io/DorUtils_CPP/images/preview.jpg" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DorUtils_CPP | C++ Utility & Learning Library" />
-  <meta name="twitter:description"
-    content="C++ utilities, data structures, algorithms and interactive learning demos by Dor Mandel." />
-  <meta name="twitter:image" content="https://dormandel.github.io/DorUtils_CPP/images/preview.jpg" />
-
-  <link rel="icon" type="image/png" href="./images/favicon-main.png" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="../images/favicon-main.png" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
+  <!-- =========================================================
+       BACKGROUND LAYERS
+  ========================================================== -->
   <div class="bg-grid"></div>
 
   <div class="bg-graph">
@@ -52,13 +43,31 @@
     <span class="line l6"></span>
   </div>
 
+  <!-- Optional animated code background -->
+  <div class="bg-code" aria-hidden="true">
+    <div class="code-line">template&lt;typename T&gt;</div>
+    <div class="code-line">class Stack { ... };</div>
+    <div class="code-line">BFS(graph, source);</div>
+    <div class="code-line">Queue&lt;int&gt; q;</div>
+    <div class="code-line">O(1) amortized</div>
+    <div class="code-line">O(V + E)</div>
+    <div class="code-line">push(value);</div>
+    <div class="code-line">pop();</div>
+  </div>
+
   <main class="page">
+    <!-- =========================================================
+         TOP BAR
+    ========================================================== -->
     <header class="topbar">
       <a class="ghost-btn" href="https://github.com/DorManDel/DorUtils_CPP" target="_blank" rel="noopener noreferrer">
         View Source
       </a>
     </header>
 
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">C++ Utility & Learning Library</p>
@@ -80,12 +89,15 @@
       </div>
     </section>
 
+    <!-- =========================================================
+         MODULE CARDS
+    ========================================================== -->
     <section class="cards">
       <article class="card stack-card">
         <h2>Stack</h2>
         <p>Interactive stack demo with size, capacity and complexity explanation.</p>
         <div class="card-actions">
-          <a href="../visualizations/stack/index.html">Open</a>
+          <a href="./stack/index.html">Open</a>
         </div>
       </article>
 

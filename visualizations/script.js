@@ -1,16 +1,28 @@
-// Reserved for future homepage animations.
-// Keeping this file intentionally minimal for now.
+/*======================================================================
+  DorUtils Homepage Script
+  Purpose:
+  - animate favicon gently
+  - keep homepage behavior simple and maintainable
+======================================================================*/
 
 const faviconFrames = [
-  "./images/favicon-main.png",
-  "./images/favicon-main.png"
+  "./images/favicon-main-1.png",
+  "./images/favicon-main-1.png",
+  "./images/favicon-main-1.png"
 ];
 
 let faviconIndex = 0;
-const favicon = document.querySelector("link[rel='icon']");
+const faviconEl = document.getElementById("site-favicon");
 
-setInterval(() => {
-  if (!favicon) return;
+/* -------------------------------------------------------------
+   Summary:
+   Rotate favicon frames every few seconds to simulate animation.
+------------------------------------------------------------- */
+function animateFavicon() {
+  if (!faviconEl) return;
+
   faviconIndex = (faviconIndex + 1) % faviconFrames.length;
-  favicon.href = faviconFrames[faviconIndex] + "?v=" + Date.now();
-}, 2200);
+  faviconEl.href = faviconFrames[faviconIndex] + "?v=" + Date.now();
+}
+
+setInterval(animateFavicon, 1800);
