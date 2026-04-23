@@ -1,96 +1,126 @@
+<!-- put on each vis page body: 
+ <header class="topbar">
+  <a class="home-btn" href="../../index.html">← Home</a>
+  <a class="hub-btn" href="../index.html">All Visualizations</a>
+</header>
+-->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DorUtils Visualizations</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DorUtils_CPP | C++ Utility & Learning Library</title>
+  <meta name="description"
+    content="DorUtils_CPP is a personal C++ utility and learning library featuring data structures, algorithms, debug tools and interactive visualizations." />
 
-    <title>DorUtils_CPP | C++ Utility Library</title>
-    <link rel="icon" type="image/png" href="../images/favicon-main.png">
+  <meta property="og:url" content="https://dormandel.github.io/DorUtils_CPP/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DorUtils_CPP" />
+  <meta property="og:title" content="DorUtils_CPP | C++ Utility & Learning Library" />
+  <meta property="og:description"
+    content="A personal C++ project featuring data structures, algorithms, debug tools, tests and interactive visualizations." />
+  <meta property="og:image" content="https://dormandel.github.io/DorUtils_CPP/images/preview.jpg" />
 
-    <meta name="description"
-        content="DorUtils_CPP is a personal C++ utility and learning library featuring data structures, algorithms, debug tools and interactive visualizations.">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DorUtils_CPP | C++ Utility & Learning Library" />
+  <meta name="twitter:description"
+    content="C++ utilities, data structures, algorithms and interactive learning demos by Dor Mandel." />
+  <meta name="twitter:image" content="https://dormandel.github.io/DorUtils_CPP/images/preview.jpg" />
 
-    <!-- Open Graph -->
-    <meta property="og:url" content="https://dormandel.github.io/DorUtils_CPP/">
-    <meta property="og:site_name" content="DorUtils_CPP">
-    <meta property="og:title" content="DorUtils_CPP ⚙️ | C++ Utility & Learning Library">
-    <meta property="og:description"
-        content="A personal C++ project featuring data structures, algorithms, debug tools, tests and interactive visualizations.">
-    <meta property="og:image" content="https://dormandel.github.io/DorUtils_CPP/images/preview.png">
-
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DorUtils_CPP ⚙️ | C++ Utility & Learning Library">
-    <meta name="twitter:description"
-        content="C++ utilities, data structures, algorithms and interactive learning demos by Dor Mandel.">
-    <meta name="twitter:image" content="https://dormandel.github.io/DorUtils_CPP/images/preview.png">
-
-    <!--
-    Preview metadata:
-
-    og:url          = canonical page URL
-    og:type         = website
-    og:site_name    = project name
-    og:title        = preview title
-    og:description  = preview subtitle
-    og:image        = preview image
-
-    twitter:card    = large image preview
-    -->
+  <link rel="icon" type="image/png" href="./images/favicon-main.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <main class="page">
-        <header class="hero">
-            <h1>DorUtils Visualization Hub</h1>
-            <p>
-                Central page for interactive demos, experiments, and educational visualizations.
-            </p>
-        </header>
+  <div class="bg-grid"></div>
 
-        <section class="grid">
-            <article class="card">
-                <h2>Stack</h2>
-                <p>
-                    Interactive stack visualization with push/pop, size/capacity view,
-                    and complexity explanation.
-                </p>
-                <div class="status done">Ready</div>
-                <div class="actions">
-                    <a href="./stack/index.html">Open Visualization</a>
-                </div>
-            </article>
+  <div class="bg-graph">
+    <span class="node n1"></span>
+    <span class="node n2"></span>
+    <span class="node n3"></span>
+    <span class="node n4"></span>
+    <span class="node n5"></span>
+    <span class="node n6"></span>
+    <span class="node n7"></span>
+    <span class="node n8"></span>
 
-            <article class="card">
-                <h2>Queue</h2>
-                <p>
-                    Planned queue visualization with enqueue/dequeue and front/rear explanation.
-                </p>
-                <div class="status planned">Planned</div>
-                <div class="actions">
-                    <a href="#">Coming Soon</a>
-                </div>
-            </article>
+    <span class="line l1"></span>
+    <span class="line l2"></span>
+    <span class="line l3"></span>
+    <span class="line l4"></span>
+    <span class="line l5"></span>
+    <span class="line l6"></span>
+  </div>
 
-            <article class="card">
-                <h2>BFS</h2>
-                <p>
-                    Planned BFS visualizer with queue, visited set, order, and complexity notes.
-                </p>
-                <div class="status planned">Planned</div>
-                <div class="actions">
-                    <a href="#">Coming Soon</a>
-                </div>
-            </article>
-        </section>
-    </main>
+  <main class="page">
+    <header class="topbar">
+      <a class="ghost-btn" href="https://github.com/DorManDel/DorUtils_CPP" target="_blank" rel="noopener noreferrer">
+        View Source
+      </a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">C++ Utility & Learning Library</p>
+
+        <div class="title-row">
+          <img src="../images/favicon-main.png" alt="DorUtils icon" class="title-icon" />
+          <h1>DorUtils_CPP</h1>
+        </div>
+
+        <p class="hero-text">
+          A personal C++ project that combines implementations,
+          documentation, tests, debug tools, and interactive visualizations.
+        </p>
+
+        <p class="hero-note">
+          Current focus: building a clean template for Stack, Queue, BFS, DFS,
+          Debug, and future modules.
+        </p>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card stack-card">
+        <h2>Stack</h2>
+        <p>Interactive stack demo with size, capacity and complexity explanation.</p>
+        <div class="card-actions">
+          <a href="../visualizations/stack/index.html">Open</a>
+        </div>
+      </article>
+
+      <article class="card queue-card">
+        <h2>Queue</h2>
+        <p>Planned queue demo with enqueue/dequeue and front/rear explanation.</p>
+        <div class="card-actions">
+          <span class="soon-badge">Soon</span>
+        </div>
+      </article>
+
+      <article class="card bfs-card">
+        <h2>BFS</h2>
+        <p>Planned graph traversal visualizer with queue, visited set and order.</p>
+        <div class="card-actions">
+          <span class="soon-badge">Soon</span>
+        </div>
+      </article>
+
+      <article class="card dfs-card">
+        <h2>DFS</h2>
+        <p>Planned DFS traversal demo with branching flow and depth-first behavior.</p>
+        <div class="card-actions">
+          <span class="soon-badge">Soon</span>
+        </div>
+      </article>
+
+      <article class="card debug-card">
+        <h2>Debug</h2>
+        <p>Colored console helpers, cleaner outputs and structured debug messages.</p>
+        <div class="card-actions">
+          <span class="soon-badge">Soon</span>
+        </div>
+      </article>
+    </section>
+  </main>
 </body>
-
 </html>
