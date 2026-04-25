@@ -1,41 +1,71 @@
-# 🧰 DorUtils_CPP — Makefile Guide
+<p align="center">
+  <img src="https://img.shields.io/badge/C++-17-blue?logo=cplusplus&style=for-the-badge">
+  <img src="https://img.shields.io/badge/Build-Makefile-green?logo=gnu&style=for-the-badge">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20WSL-lightgrey?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Version-v0.1.0-purple?style=for-the-badge">
+</p>
 
-> Educational build system for **DorUtils_CPP**
-> This Makefile is designed to both **build the project** and **teach how Makefiles work**.
+<h1 align="center">🧰 DorUtils_CPP — Ultimate Makefile Guide</h1>
 
----
-
-## 📚 Table of Contents
-
-* [What is a Makefile?](#-what-is-a-makefile)
-* [How Make Thinks](#-how-make-thinks)
-* [Project Layout](#-project-layout)
-* [Main Sections Explained](#-main-sections-explained)
-* [Useful Commands](#-useful-commands)
-* [Windows / WSL Notes](#-windows--wsl-notes)
-* [Why Makefiles Matter](#-why-makefiles-matter)
+<p align="center">
+  <b>Build • Test • Learn • Automate</b><br>
+  Educational Makefile designed as both a build tool and a study guide.
+</p>
 
 ---
 
-## 🧠 What is a Makefile?
+# 📚 Table of Contents
 
-A Makefile is an automation script used to:
+* [🚀 Quick Start](#-quick-start)
+* [🧠 What is a Makefile?](#-what-is-a-makefile)
+* [⚙️ How Make Thinks](#️-how-make-thinks)
+* [📁 Project Layout](#-project-layout)
+* [🏗️ Main Makefile Sections](#️-main-makefile-sections)
+* [🩺 Doctor Mode](#-doctor-mode)
+* [🪟 Windows / WSL Notes](#-windows--wsl-notes)
+* [💡 Why This Matters](#-why-this-matters)
+* [🔥 Future Ideas](#-future-ideas)
 
-* Compile code
-* Build projects
-* Run tests
-* Save time
+---
 
-Instead of writing:
+# 🚀 Quick Start
 
-```bash
-g++ file1.cpp
-g++ file2.cpp
-mkdir build
-./program
+## Windows (PowerShell)
+
+```powershell
+mingw32-make help
+mingw32-make
+mingw32-make doctor
 ```
 
-You simply write:
+## WSL / Ubuntu
+
+```bash
+make help
+make
+make doctor
+```
+
+---
+
+# 🧠 What is a Makefile?
+
+A **Makefile** is an automation file that tells the system how to:
+
+✅ Compile code
+✅ Build projects
+✅ Run tests
+✅ Organize outputs
+✅ Save time
+
+Instead of typing:
+
+```bash
+g++ main.cpp -o app
+./app
+```
+
+You type:
 
 ```bash
 make
@@ -43,9 +73,9 @@ make
 
 ---
 
-## ⚙️ How Make Thinks
+# ⚙️ How Make Thinks
 
-When you type:
+When you run:
 
 ```bash
 make
@@ -53,7 +83,7 @@ make
 
 Make asks:
 
-> What target should I build?
+> Which target should I build?
 
 Default target:
 
@@ -74,30 +104,39 @@ Meaning:
 
 ---
 
-## 📁 Project Layout
+# 📁 Project Layout
 
 ```txt
 DorUtils_CPP/
-├── include/
-├── examples/
-├── tests/
-├── build/
+├── include/          # Headers
+├── examples/         # Demo programs
+├── tests/            # Unit / stress tests
+├── build/            # Generated output
 ├── makefile
 └── README.md
 ```
 
 ---
 
-## 🏗️ Main Sections Explained
+# 🏗️ Main Makefile Sections
 
-### 1️⃣ Compiler Settings
+<details>
+<summary><b>1️⃣ Compiler Settings</b></summary>
 
 ```makefile
 CXX := g++
 CXXFLAGS := -std=c++17 -Wall -Wextra -pedantic -Iinclude
 ```
 
-### 2️⃣ Folder Variables
+| Variable   | Meaning       |
+| ---------- | ------------- |
+| `CXX`      | Compiler      |
+| `CXXFLAGS` | Build options |
+
+</details>
+
+<details>
+<summary><b>2️⃣ Folder Variables</b></summary>
 
 ```makefile
 BUILD_DIR := build
@@ -105,103 +144,155 @@ EXAMPLE_DIR := examples
 TEST_DIR := tests
 ```
 
-### 3️⃣ Auto File Detection
+Reusable paths.
+
+</details>
+
+<details>
+<summary><b>3️⃣ Auto File Detection</b></summary>
 
 ```makefile
 EXAMPLE_SRCS := $(wildcard examples/*.cpp)
 ```
 
-Automatically detects all `.cpp` files.
+Automatically finds all `.cpp` files.
 
-### 4️⃣ Main Targets
+</details>
+
+<details>
+<summary><b>4️⃣ Main Targets</b></summary>
 
 ```makefile
 all: examples tests
 ```
 
-### 5️⃣ Build Rules
+Build everything.
+
+</details>
+
+<details>
+<summary><b>5️⃣ Build Rules</b></summary>
 
 ```makefile
 build/examples/%: examples/%.cpp
 ```
 
-### 6️⃣ Folder Creation
+Converts:
 
-```makefile
-mkdir -p build/examples
+```txt
+examples/demo.cpp
+↓
+build/examples/demo
 ```
 
-### 7️⃣ Run Helpers
+</details>
 
-```bash
-make run-common
-make run-stack
-make run-tests
-```
-
-### 8️⃣ Cleaning
+<details>
+<summary><b>6️⃣ Cleaning</b></summary>
 
 ```bash
 make clean
 ```
 
-### 9️⃣ .PHONY
+Deletes generated build files.
+
+</details>
+
+<details>
+<summary><b>7️⃣ .PHONY</b></summary>
 
 ```makefile
-.PHONY: clean all tests help
+.PHONY: all clean tests help
 ```
 
----
+Marks command targets as commands, not files.
 
-## 🚀 Useful Commands
-
-| Command         | Purpose             |
-| --------------- | ------------------- |
-| `make`          | Build all           |
-| `make examples` | Build demos         |
-| `make tests`    | Build tests         |
-| `make debug`    | Debug build         |
-| `make release`  | Optimized build     |
-| `make doctor`   | Environment check   |
-| `make clean`    | Remove build folder |
+</details>
 
 ---
 
-## 🪟 Windows / WSL Notes
+# 🩺 Doctor Mode
 
-### Windows PowerShell
+Check your environment:
+
+```bash
+make doctor
+```
+
+or on Windows:
+
+```powershell
+mingw32-make doctor
+```
+
+Doctor verifies:
+
+✅ Compiler exists
+✅ Required folders exist
+✅ Example files found
+✅ Test files found
+✅ Optional tools available (`cmake`, `gdb`, `clang`, etc.)
+
+---
+
+# 🪟 Windows / WSL Notes
+
+## Windows
+
+Use:
 
 ```powershell
 mingw32-make
 ```
 
-### WSL Ubuntu
+If `make` is not recognized.
+
+## WSL / Ubuntu
+
+Install tools:
+
+```bash
+sudo apt update
+sudo apt install build-essential cmake gdb valgrind clang
+```
+
+Then run:
 
 ```bash
 make
-sudo apt install build-essential cmake gdb valgrind clang
 ```
 
 ---
 
-## 💡 Why Makefiles Matter
+# 💡 Why This Matters
 
-They teach:
+This Makefile teaches real development skills:
 
-* Automation
-* Build systems
-* Dependencies
-* Scalable projects
-* Professional workflow
+✅ Build systems
+✅ Automation
+✅ Dependency logic
+✅ Scalable project structure
+✅ Professional workflow
 
 ---
 
-## 🔥 Future Ideas
+# ⌬ DorUtils Philosophy
 
-* Colored output
+DorUtils_CPP is not just a library.
+
+It is a **study-first project** where every tool also teaches how it works.
+
+---
+
+# 🔥 Future Ideas
+
+* Colored terminal output
 * Benchmark mode
-* Auto docs
-* Unit reports
-* CI/CD
+* Unit test report summary
+* Auto docs generation
+* Package release mode
+* GitHub Actions CI/CD
+* Install command (`make install`)
 
 ---
+
