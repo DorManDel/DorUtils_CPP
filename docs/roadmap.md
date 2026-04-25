@@ -131,6 +131,18 @@ Create one main HTML page that connects all demos and tryouts.
 
 ---
 
+## DorUtils Site TDL
+
+### Future Features
+- [ ] Add search bar for algorithms, data structures, utilities, and database topics.
+- [ ] Start with simple frontend filtering by card title, text, and `data-tags`.
+- [ ] Later upgrade to `search-index.json`.
+- [ ] Add categories: Data Structures, Algorithms, Databases, C++ Utilities, Visual Demos.
+- [ ] Add keyboard shortcut: `/` focuses the search bar.
+- [ ] Add “No results found” message.
+
+---
+
 # Notes
 
 The project should always prefer:
