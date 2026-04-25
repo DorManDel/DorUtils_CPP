@@ -3,7 +3,7 @@
 /* ---------------------------------------------------------- */
 #include <stdexcept>
 #include <utility>
-#include "dor/utils/core/Common.hpp"
+#include "dor/utils/core/Common.hpp"    // better for compiler uses -Iinclude
 /* ---------------------------------------------------------- */
 namespace dor::utils
 {
