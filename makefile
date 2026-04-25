@@ -165,6 +165,7 @@ help:
 	@echo " make list         Show detected source files"
 	@echo " make clean        Remove build folder"
 	@echo " make version      Show DorUtils version info"
+	@echo " make doctor       Check compiler, folders, files and tools"
 	@echo "============================================================"
 version:
 	@echo "============================================================"
@@ -172,6 +173,34 @@ version:
 	@echo " Version : v$(VERSION)"
 	@echo " Codename: $(CODENAME)"
 	@echo " Author  : $(AUTHOR)"
+	@echo "============================================================"
+
+# ==============================================================================
+# SECTION 8.5 — Doctor / Environment Check
+# ==============================================================================
+
+# made mainly for WSL:
+doctor:
+	@echo "============================================================"
+	@echo " 🩺 DorUtils_CPP Doctor"
+	@echo "============================================================"
+	@echo "Checking compiler..."
+	@$(CXX) --version || echo "❌ g++ not found"
+	@echo ""
+	@echo "Checking project folders..."
+	@test -d include  && echo "✅ include/ found"  || echo "❌ include/ missing"
+	@test -d examples && echo "✅ examples/ found" || echo "❌ examples/ missing"
+	@test -d tests    && echo "✅ tests/ found"    || echo "❌ tests/ missing"
+	@echo ""
+	@echo "Checking detected files..."
+	@echo "Examples: $(EXAMPLE_SRCS)"
+	@echo "Tests   : $(TEST_SRCS)"
+	@echo ""
+	@echo "Checking optional tools..."
+	@cmake --version > /dev/null 2>&1 && echo "✅ cmake found" || echo "⚠️ cmake not found"
+	@gdb --version > /dev/null 2>&1 && echo "✅ gdb found" || echo "⚠️ gdb not found"
+	@valgrind --version > /dev/null 2>&1 && echo "✅ valgrind found" || echo "⚠️ valgrind not found"
+	@clang++ --version > /dev/null 2>&1 && echo "✅ clang++ found" || echo "⚠️ clang++ not found"
 	@echo "============================================================"
 
 
@@ -187,4 +216,6 @@ clean:
 # SECTION 10 — Phony Targets
 # ==============================================================================
 
-.PHONY: all examples tests debug release run-common run-stack run-tests list help version clean
+.PHONY: all examples tests debug release run-common run-stack run-tests list help version clean doctor
+
+# each command we add we need to add to PHONY + HELP LIST
