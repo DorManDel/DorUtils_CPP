@@ -1,3 +1,4 @@
+## 🚧 !!! CURRENTLY UNDER CONSTRUCTION !!! 🚧 
 <p align="center">
   <img src="https://img.shields.io/badge/C++-17-blue?logo=cplusplus&style=for-the-badge">
   <img src="https://img.shields.io/badge/Build-Makefile-green?logo=gnu&style=for-the-badge">
@@ -5,10 +6,10 @@
   <img src="https://img.shields.io/badge/Version-v0.1.0-purple?style=for-the-badge">
 </p>
 
-<h1 align="center">🧰 DorUtils_CPP — Ultimate Makefile Guide</h1>
+<h1 align="center"> 🧰 DorUtils_CPP — Ultimate Makefile Guide 🧰 </h1>
 
 <p align="center">
-  <b>Build • Test • Learn • Automate</b><br>
+  <b>Build • Test • Learn • Debug • Automate</b><br>
   Educational Makefile designed as both a build tool and a study guide.
 </p>
 
