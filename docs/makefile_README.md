@@ -1,4 +1,5 @@
 # ⌬ DorUtils_CPP — Complete Makefile Study Guide ⌬
+<!--![Preview](docs\imgs\main-logo.png) -->
 
 <p align="center">
   <img src="https://img.shields.io/badge/C++-17-blue?logo=cplusplus&style=for-the-badge">

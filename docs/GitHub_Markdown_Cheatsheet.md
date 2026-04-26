@@ -31,6 +31,14 @@
 
 # 🔠 Headings
 
+
+# H1          | ``` # H1 ```
+## H2         | ``` ## H2 ```
+### H3        | ``` ### H3```
+#### H4       | ``` #### H4```
+##### H5      | ``` ##### H5```
+###### H6     | ``` ###### H6```
+
 ```md
 # H1
 ## H2
@@ -38,17 +46,15 @@
 #### H4
 ##### H5
 ###### H6
+```
 
-H1
-H2
-H3
-H4
-✍️ Text Formatting
-**Bold**
-*Italic*
-***Bold Italic***
-~~Strikethrough~~
-`Inline Code`
+✍️ Text Formatting   <br>
+
+| **Bold**            |    Bold     
+| *Italic*            |    Italic              
+| ***Bold Italic***   |    Bold Italic <br>
+| ~~Strikethrough~~   |    Strikethrough  
+| `Inline Code`       |    Inline Code 
 
 Bold
 Italic

@@ -1,0 +1,49 @@
+# ==========================================
+# 🧰 DorUtils_CPP Git Ignore
+# ==========================================
+
+# Build folders
+build/
+bin/
+out/
+
+# Windows executables
+*.exe
+
+# Linux / WSL compiled outputs (no extension)
+stack_demo
+common_demo
+*_demo
+*_test
+
+# Object files
+*.o
+*.obj
+
+# Static / dynamic libraries
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# Debug symbols
+*.pdb
+*.ilk
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# VS Code temp
+.vscode/settings.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
