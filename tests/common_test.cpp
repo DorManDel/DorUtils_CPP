@@ -1,5 +1,9 @@
 // --------------------------------------- >
 // run in Terminal : make run-stack
+/*
+make tests
+make run file=common_test
+*/
 // --------------------------------------- >
 
 #include "dor/utils/DorUtils.hpp"

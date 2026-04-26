@@ -138,6 +138,27 @@ run-tests: tests
 		./$$test; \
 	done
 
+# ==============================================================================
+# SECTION 7.5 — Dynamic Run Helper
+# ==============================================================================
+
+run:
+	@if [ -z "$(file)" ]; then \
+		echo "Usage:"; \
+		echo "  make run file=common_test"; \
+		echo "  make run file=stack_demo"; \
+		echo ""; \
+		echo "Make will search in build/tests/ first, then build/examples/."; \
+	elif [ -f "$(BUILD_DIR)/tests/$(file)" ]; then \
+		./$(BUILD_DIR)/tests/$(file); \
+	elif [ -f "$(BUILD_DIR)/examples/$(file)" ]; then \
+		./$(BUILD_DIR)/examples/$(file); \
+	else \
+		echo "File not found: $(file)"; \
+		echo "Try building first with:"; \
+		echo "  make tests"; \
+		echo "  make examples"; \
+	fi
 
 # ==============================================================================
 # SECTION 8 — Info / Study Commands
@@ -216,6 +237,6 @@ clean:
 # SECTION 10 — Phony Targets
 # ==============================================================================
 
-.PHONY: all examples tests debug release run-common run-stack run-tests list help version clean doctor
+.PHONY: all examples tests debug release run run-common run-stack run-tests list help version doctor clean
 
 # each command we add we need to add to PHONY + HELP LIST
