@@ -95,14 +95,14 @@ run-common: build/examples/common_demo
 ```
 Meaning:
 
-Before running run-common, make sure build/examples/common_demo exists.
+Before running ```run-common```, make sure ```build/examples/common_demo``` exists.
 Then run the command below it.
 
 ### ⚠️ Important:
 
 #### Commands inside Makefiles must start with a real TAB, not spaces.
 
-### Installing Make
+### Installing Make ⌨️
 ```bash
 Windows — MinGW / MSYS2
 ```
@@ -136,7 +136,7 @@ scoop install make
 
 * Then restart PowerShell or VS Code.
 
-### WSL / Ubuntu
+### WSL / Ubuntu 🐧
 
 ```bash
 sudo apt update
@@ -187,7 +187,7 @@ mingw32-make help
 mingw32-make doctor
 ```
 
-### Option 2 — PowerShell Alias
+### Option 2 — PowerShell Alias 🪪
 
 Open PowerShell and run:
 
@@ -223,8 +223,8 @@ or:
 ```bash
 C:\MinGW\bin\
 ```
-* i used 🔍 "everything" by void-tools to search the file - very recommended tool: 
-https://www.voidtools.com/downloads/
+- I used 🔍 **Everything** to search the file — highly recommended:  
+[Download Everything](https://www.voidtools.com/downloads/)
 
 Copy it and rename the copy to:
 ```bash
@@ -238,7 +238,7 @@ make.exe
 ```
 Then restart the terminal.
 
-Project Structure
+## Project Structure
 
 Recommended DorUtils_CPP structure:
 ```
@@ -268,15 +268,22 @@ DorUtils_CPP/
 └── makefile_README.md
 ```
 
-Folder purpose
-Folder	Purpose
-include/	Library headers
-examples/	Demo files showing how to use the library
-tests/	Test files that check correctness
-build/	Generated compiled files
-makefile	Build automation file
-makefile_README.md	This guide
-Full Makefile
+## Folder purpose
+
+| Folder | Purpose |
+|---|---|
+| include/              | Library headers                           |
+examples/               |Demo files showing how to use the library  |
+tests/	                |Test files that check correctness          |
+build/	                |Generated compiled files                   |
+makefile	            |Build automation file                      |
+makefile_README.md	    |This guide                                 |
+
+---
+
+
+##  --- Full Makefile ---
+
 ```
  ==============================================================================
  🧰 DorUtils_CPP — Ultimate Educational Makefile V1
@@ -403,8 +410,8 @@ clean:
 
 .PHONY: all examples tests debug release run-common run-stack run-tests list help version doctor clean
 ```
-
-* Line-by-Line Explanation
+---
+## Line-by-Line Explanation
 Header comments:
 
 ```
@@ -414,26 +421,31 @@ Header comments:
 ```
  These are comments. Make ignores them.
  
- ```bash
- " # comment example"
+ ```
+  #  comment example ( # - used to mark a comment )
  ```
 
 They are used to make the file readable.
 
-Compiler
+### Compiler
  ```bash
 CXX := g++
 ```
 CXX stores the C++ compiler name.
 
 Here we use:
-
+```bash
 g++
+```
 
 Later, instead of writing g++ everywhere, we write:
  ```bash
 $(CXX)
-Compiler flags
+```
+
+### Compiler flags
+
+ ```bash
 CXXFLAGS := -std=c++17 -Wall -Wextra -pedantic -Iinclude
 ```
 CXXFLAGS stores options passed to the compiler.
@@ -806,7 +818,7 @@ Help target
 Shows a command menu.
 
 Run:
-```bash
+```powershell
 make help
 Clean target
 clean:
@@ -815,16 +827,18 @@ clean:
 
 Deletes the build/ folder.
 
+---
 ```rm -rf ```:  means:
 
-`rm` remove
-`-r` recursive, delete folders and contents
-`-f` force, no confirmation
+ - `rm` remove
+ - `-r` recursive, delete folders and contents
+ - `-f` force, no confirmation
 
 ### ⚠️ Be careful with rm -rf.
-```bash
-Phony targets
-```
+---
+
+## Phony targets
+
 `.PHONY:` all examples tests debug release run-common run-stack run-tests list help version doctor clean
 
 .PHONY tells Make:
@@ -833,7 +847,7 @@ These are command names, not real files.
 
 Without .PHONY, if a file named clean exists, Make might think the target is already done.
 
-Important Makefile Concepts
+## Important Makefile Concepts
 ```bash
 := vs =
 A := hello
@@ -883,8 +897,9 @@ Wrong:
 target:
     g++ main.cpp
 ```    
-#### Useful Commands
-### Windows :
+## Useful Commands
+
+### Windows 🪟:
 ```bash
 mingw32-make help
 mingw32-make list
@@ -893,7 +908,7 @@ mingw32-make run-common
 mingw32-make doctor
 mingw32-make clean
 ```
-### WSL / Linux :
+### WSL / Linux 🐧:
 ```bash
 make help
 make list
@@ -902,9 +917,9 @@ make run-common
 make doctor
 make clean
 ```
-Troubleshooting
+## Troubleshooting 😵‍💫
 ```
-make is not recognized
+make is not recognized 😱
 ```
 Use:
 ```bash
