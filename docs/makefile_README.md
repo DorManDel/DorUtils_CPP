@@ -1,5 +1,9 @@
 # ⌬ DorUtils_CPP — Complete Makefile Study Guide ⌬
-<!--![Preview](docs\imgs\main-logo.png) -->
+<p align="center">
+  <a href="https://dormandel.github.io/DorUtils_CPP/">
+    <img src="./imgs/main-logo.png" alt="DorUtils_CPP Preview" width="50">
+  </a>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/C++-17-blue?logo=cplusplus&style=for-the-badge">
@@ -272,13 +276,13 @@ DorUtils_CPP/
 ## Folder purpose
 
 | Folder | Purpose |
-|---|---|
-| include/              | Library headers                           |
-examples/               |Demo files showing how to use the library  |
-tests/	                |Test files that check correctness          |
-build/	                |Generated compiled files                   |
-makefile	            |Build automation file                      |
-makefile_README.md	    |This guide                                 |
+|---						|---											
+| `include/`              	| Library headers                           	|
+|`examples/`               	|Demo files showing how to use the library  	|
+|`tests/`	                |Test files that check correctness          	|
+|`build/`	                |Generated compiled files                   	|
+|`makefile`	            	|Build automation file                      	|
+|`makefile_README.md`	    |This guide                                 	|
 
 ---
 

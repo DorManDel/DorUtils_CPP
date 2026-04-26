@@ -1,11 +1,30 @@
-https://dormandel.github.io/DorUtils_CPP/index.html
 
-https://github.com/DorManDel/DorUtils_CPP
+## 🔗 Project Links
+
+- [Live DorUtils Site](https://dormandel.github.io/DorUtils_CPP/)
+- [GitHub Repository](https://github.com/DorManDel/DorUtils_CPP)
+- [Roadmap](roadmap.md)
+- [WSL Commands](WSL_Commands.md)
+- [Markdown Cheat Sheet](GitHub_Markdown_Cheatsheet.md)
+
+---
 
 ## after each update: 
-### git add .
-### git commit -m " what did you do? ...  "
-### git push
+<details>
+
+```bash 
+git add .
+```
+```bash
+git commit -m " what did you do? ...  "
+```
+```bash
+git push
+```
+
+</details>
+
+---
 
 # DorUtils_CPP
 
